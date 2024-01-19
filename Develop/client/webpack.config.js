@@ -38,6 +38,7 @@ module.exports = () => {
          start_url: './',
          publicPath: './',
          icons: [
+
       {
         src: path.resolve('src/images/logo.png'),
         sizes: [96, 128, 192, 256, 384, 512],
@@ -57,14 +58,14 @@ module.exports = () => {
           test: /\.m?js$/,
           exclude: /node_modules/,
           use: {
-            loader: 'babel-loader',
-            options: {
-              presets: ['@babel/preset-env'],
-              plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime'],
-            },
-          },
-        },
-      ],
+          loader: 'babel-loader',
+          options: {
+          presets: ['@babel/preset-env'],
+          plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime'],
+      },
     },
-  };
+    },
+    ],
+    },
+    };
 };
